@@ -1,7 +1,5 @@
 package simpleAliyunApiClient
 
-const TagName = "aliParam"
-
 type AliApiAction interface {
 	GetActionInfo() ActionInfo
 }
@@ -11,7 +9,7 @@ type ActionInfo struct {
 	Version string
 }
 
-type client struct {
+type Client struct {
 	Format           string `aliParam:"Format"`           // 指定接口返回数据的格式。可以选择 json 或者 XML。默认为 XML
 	AccessKeyId      string `aliParam:"AccessKeyId"`      // 阿里云访问密钥ID
 	SignatureNonce   string `aliParam:"SignatureNonce"`   // 签名唯一随机数
