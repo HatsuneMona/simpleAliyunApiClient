@@ -26,8 +26,8 @@ func GetUTCTimestamp() string {
 	return time.Now().UTC().Format("2006-01-02T15:04:05Z")
 }
 
-// buildSignStr 构造签名所需的字符串
-func buildSignStr(paramMap map[string]string) string {
+// BuildSignStr 构造签名所需的字符串
+func BuildSignStr(paramMap map[string]string) string {
 	sortKey := make([]string, 0, len(paramMap))
 	for key, value := range paramMap {
 		if key != "" && value != "" {

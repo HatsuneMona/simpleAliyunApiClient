@@ -133,8 +133,8 @@ func Test_buildSignStr(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := buildSignStr(tt.args.paramMap); got != tt.want {
-				t.Errorf("buildSignStr() = %v, want %v", got, tt.want)
+			if got := BuildSignStr(tt.args.paramMap); got != tt.want {
+				t.Errorf("BuildSignStr() = %v, want %v", got, tt.want)
 			}
 		})
 	}
